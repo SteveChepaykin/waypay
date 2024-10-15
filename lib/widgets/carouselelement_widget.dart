@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:waypay/models/installment_model.dart';
+import 'package:waypay/screens/client/installmentinfo_screen.dart';
 
 class CarouselElement extends StatelessWidget {
   final Installment installment;
@@ -10,7 +12,9 @@ class CarouselElement extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Get.to(InstallmentInfoScreen(installment));
+      },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 6),
         child: Container(

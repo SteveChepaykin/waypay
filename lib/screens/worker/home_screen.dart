@@ -9,6 +9,7 @@ class WorkerHomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        forceMaterialTransparency: true,
         leading: IconButton(
               onPressed: () {},
               icon: const Icon(

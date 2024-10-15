@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:waypay/controllers/user_controller.dart';
 import 'package:waypay/screens/client/home_screen.dart';
 import 'package:waypay/screens/worker/home_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  UserController userc = UserController();
+  userc.init();
+  Get.put<UserController>(userc);
   runApp(const MyApp());
 }
 
@@ -11,7 +17,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -21,7 +27,7 @@ class MyApp extends StatelessWidget {
           bodyMedium: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
         ),
       ),
-      home: const WorkerHomeScreen(),
+      home: ClientHomeScreen(),
     );
   }
 }
