@@ -61,7 +61,6 @@ class InstallmentInfoScreen extends StatelessWidget {
             if(!installment.isAlive) Text("Платеж просрочен"),
             if(!installment.isAlive) Text("Погасите платеж в срочном порядке"),
             const SizedBox(height: 23),
-            
             InfoCard(
               height: 200,
               isAlive: installment.isAlive,

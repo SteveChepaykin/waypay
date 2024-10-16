@@ -3,9 +3,21 @@ import 'package:get/get.dart';
 import 'package:waypay/models/installment_model.dart';
 import 'package:waypay/widgets/infocard_widget.dart';
 
-class HistoryScreen extends StatelessWidget {
-  final List<Installment> historyInstallments;
-  const HistoryScreen({required this.historyInstallments, super.key});
+class HistoryScreen extends StatefulWidget {
+  const HistoryScreen({super.key});
+
+  @override
+  State<HistoryScreen> createState() => _HistoryScreenState();
+}
+
+class _HistoryScreenState extends State<HistoryScreen> {
+  late List<Installment> historyInstallments;
+
+  @override
+  void initState() {
+    historyInstallments = [];
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -18,7 +18,11 @@ class _PaymentPlanScreenState extends State<PaymentPlanScreen> {
 
   @override
   void initState() {
-    paymentslist = [];
+    paymentslist = [
+      Payment({"amount": 1000, "paydate": DateTime(2024, 10, 1).toIso8601String(), "isalive": false}),
+      Payment({"amount": 500, "paydate": DateTime(2024, 11, 1).toIso8601String(),}),
+      Payment({"amount": 790, "paydate": DateTime(2024, 12, 1).toIso8601String(),}),
+    ];
     super.initState();
   }
 
@@ -46,14 +50,16 @@ class _PaymentPlanScreenState extends State<PaymentPlanScreen> {
             const SizedBox(height: 14),
             FilterTextField(controller: namecont, label: "ФИО"),
             const SizedBox(height: 14),
-            ListView(
-              children: [
-                ...(paymentslist
-                    .map(
-                      (e) => PaymentListItem(payment: e),
-                    )
-                    .toList()),
-              ],
+            Expanded(
+              child: ListView(
+                children: [
+                  ...(paymentslist
+                      .map(
+                        (e) => PaymentListItem(payment: e),
+                      )
+                      .toList()),
+                ],
+              ),
             ),
           ],
         ),

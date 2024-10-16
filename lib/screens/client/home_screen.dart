@@ -43,7 +43,7 @@ class ClientHomeScreen extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              Get.to(const ProfileScreen());
+              Get.to(() => const ProfileScreen());
             },
             icon: const Icon(
               Icons.person,

@@ -13,7 +13,7 @@ class CarouselElement extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Get.to(InstallmentInfoScreen(installment));
+        Get.to(() => InstallmentInfoScreen(installment));
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 6),

@@ -26,7 +26,7 @@ class WorkerMainOptions extends StatelessWidget {
                 title: "Калькулятор",
                 imagelink: "assets/calculator.png",
                 func: () {
-                  Get.to(const CalculatorScreen());
+                  Get.to(() => const CalculatorScreen());
                 },
               ),
               const SizedBox(
@@ -38,7 +38,7 @@ class WorkerMainOptions extends StatelessWidget {
                 title: "Договоры",
                 imagelink: "assets/contracts.png",
                 func: () {
-                  Get.to(const ContractsScreen());
+                  Get.to(() => const ContractsScreen());
                 },
               )
             ],
@@ -50,7 +50,7 @@ class WorkerMainOptions extends StatelessWidget {
             title: "Новый платёж",
             imagelink: "assets/new_payment.png",
             func: () {
-              Get.to(const NewPaymentScreen());
+              Get.to(() => const NewPaymentScreen());
             },
           ),
           const SizedBox(height: 14),
@@ -60,7 +60,7 @@ class WorkerMainOptions extends StatelessWidget {
             title: "Чёрный список",
             color: const Color(0xFF454545),
             func: () {
-              Get.to(const BlackListScreen());
+              Get.to(() => const BlackListScreen());
             },
           )
         ],

@@ -23,7 +23,7 @@ class ClientMainOptions extends StatelessWidget {
             title: "График платежей",
             imagelink: "assets/graph.png",
             func: () {
-              Get.to(PaymentPlanScreen());
+              Get.to(() => const PaymentPlanScreen());
             },
           ),
           const SizedBox(
@@ -38,7 +38,7 @@ class ClientMainOptions extends StatelessWidget {
                 title: "Ваша история",
                 imagelink: "assets/history.png",
                 func: () {
-                  Get.to(const HistoryScreen(historyInstallments: [],));
+                  Get.to(() => const HistoryScreen());
                 },
               ),
               const SizedBox(
@@ -50,7 +50,7 @@ class ClientMainOptions extends StatelessWidget {
                 imagelink: "assets/question_answer.png",
                 title: "Вопрос-ответ",
                 func: () {
-                  Get.to(const QnAScreen());
+                  Get.to(() => const QnAScreen());
                 },
               )
             ],
