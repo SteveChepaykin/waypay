@@ -41,18 +41,18 @@ class ClientMainOptions extends StatelessWidget {
                   Get.to(() => const HistoryScreen());
                 },
               ),
-              const SizedBox(
-                width: 12,
-              ),
-              MainOptionsElement(
-                height: 129,
-                width: (availableWidth - 44) / 2 * 0.85,
-                imagelink: "assets/question_answer.png",
-                title: "Вопрос-ответ",
-                func: () {
-                  Get.to(() => const QnAScreen());
-                },
-              )
+              // const SizedBox(
+              //   width: 12,
+              // ),
+              // MainOptionsElement(
+              //   height: 129,
+              //   width: (availableWidth - 44) / 2 * 0.85,
+              //   imagelink: "assets/question_answer.png",
+              //   title: "Вопрос-ответ",
+              //   func: () {
+              //     Get.to(() => const QnAScreen());
+              //   },
+              // ),
             ],
           ),
         ],

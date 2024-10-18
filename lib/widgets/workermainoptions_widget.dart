@@ -26,7 +26,7 @@ class WorkerMainOptions extends StatelessWidget {
                 title: "Калькулятор",
                 imagelink: "assets/calculator.png",
                 func: () {
-                  Get.to(() => const CalculatorScreen());
+                  Get.to(() => CalculatorScreen());
                 },
               ),
               const SizedBox(
@@ -50,7 +50,7 @@ class WorkerMainOptions extends StatelessWidget {
             title: "Новый платёж",
             imagelink: "assets/new_payment.png",
             func: () {
-              Get.to(() => const NewPaymentScreen());
+              Get.to(() => NewPaymentScreen());
             },
           ),
           const SizedBox(height: 14),
