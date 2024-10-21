@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:waypay/controllers/user_controller.dart';
 import 'package:waypay/screens/client/home_screen.dart';
+import 'package:waypay/screens/login/login_screen.dart';
 import 'package:waypay/screens/worker/home_screen.dart';
 
 void main() async {
@@ -27,7 +28,9 @@ class MyApp extends StatelessWidget {
           bodyMedium: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
         ),
       ),
-      home: ClientHomeScreen(),
+      home: const LoginScreen(
+        
+      ),
     );
   }
 }
