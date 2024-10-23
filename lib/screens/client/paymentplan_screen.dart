@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:waypay/models/payment_mode.dart';
+import 'package:waypay/models/payment_model.dart';
 import 'package:waypay/widgets/filtertextfield_widget.dart';
 import 'package:waypay/widgets/paymentlistitem_widget.dart';
 
@@ -19,9 +19,9 @@ class _PaymentPlanScreenState extends State<PaymentPlanScreen> {
   @override
   void initState() {
     paymentslist = [
-      Payment({"amount": 1000, "paydate": DateTime(2024, 10, 1).toIso8601String(), "isalive": false}),
-      Payment({"amount": 500, "paydate": DateTime(2024, 11, 1).toIso8601String(),}),
-      Payment({"amount": 790, "paydate": DateTime(2024, 12, 1).toIso8601String(),}),
+      Payment("1", {"amount": 1000, "paydate": DateTime(2024, 10, 1).toIso8601String(), "isalive": false}),
+      Payment("2", {"amount": 500, "paydate": DateTime(2024, 11, 1).toIso8601String(),}),
+      Payment("3", {"amount": 790, "paydate": DateTime(2024, 12, 1).toIso8601String(),}),
     ];
     super.initState();
   }

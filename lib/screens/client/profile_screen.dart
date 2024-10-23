@@ -26,7 +26,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       "Телефон": TextEditingController(text: user.phoneNumber),
       "Запасной телефон": TextEditingController(text: user.secondaryPhoneNumber),
       "Документ": TextEditingController(text: user.document),
-      "Дата выдачи": TextEditingController(text: DateFormat("dd.mm.yyyy").format(user.documentRetrieveDate)),
+      "Дата выдачи": TextEditingController(text: user.documentRetrieveDate != null ? DateFormat("dd.mm.yyyy").format(user.documentRetrieveDate!) : ""),
       "Адрес регистрации": TextEditingController(text: user.registerAdress),
     };
     super.initState();

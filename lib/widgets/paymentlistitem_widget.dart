@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:waypay/models/payment_mode.dart';
+import 'package:waypay/models/payment_model.dart';
 
 class PaymentListItem extends StatelessWidget {
   final Payment payment;

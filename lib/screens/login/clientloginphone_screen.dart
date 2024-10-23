@@ -10,6 +10,15 @@ class ClientLoginPhoneScreen extends StatelessWidget {
   final TextEditingController numbercont = TextEditingController();
   final TextEditingController passwordcont = TextEditingController();
 
+  bool validateForm() {
+    bool res = true;
+    String numt = numbercont.text;
+    String pswt = passwordcont.text;
+    if (numt.length != 12) res = false;
+    if (pswt.length < 6 || pswt.length > 50) res = false;
+    return res;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +57,9 @@ class ClientLoginPhoneScreen extends StatelessWidget {
             SpecialButton(
               title: "Войти",
               function: () {
-                Get.to(() => ClientLoginCodeScreen());
+                bool validate = validateForm();
+                //Some backend logic
+                if(validate) Get.to(() => ClientLoginCodeScreen());
               },
             ),
             const Spacer(
@@ -73,11 +84,12 @@ class ClientLoginPhoneScreen extends StatelessWidget {
                   ),
                 ),
                 TextButton(
-                    onPressed: () {},
-                    child: const Text(
-                      "Регистрация",
-                      style: TextStyle(color: Colors.black),
-                    )),
+                  onPressed: () {},
+                  child: const Text(
+                    "Регистрация",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ),
               ],
             )
           ],

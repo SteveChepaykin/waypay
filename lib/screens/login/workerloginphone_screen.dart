@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:waypay/screens/worker/home_screen.dart';
 import 'package:waypay/widgets/customtextfield_widget.dart';
 import 'package:waypay/widgets/specialbutton_widget.dart';
 
@@ -7,6 +9,15 @@ class WorkerLoginPhoneScreen extends StatelessWidget {
 
   final TextEditingController numbercont = TextEditingController();
   final TextEditingController passwordcont = TextEditingController();
+
+  bool validateForm() {
+    bool res = true;
+    String numt = numbercont.text;
+    String pswt = passwordcont.text;
+    if (numt.length != 12) res = false;
+    if (pswt.length < 6 || pswt.length > 50) res = false;
+    return res;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +56,11 @@ class WorkerLoginPhoneScreen extends StatelessWidget {
             ),
             SpecialButton(
               title: "Войти",
-              function: () {},
+              function: () {
+                bool validate = validateForm();
+                //Some backend logic;
+                if(validate) Get.to(() => const WorkerHomeScreen());
+              },
             ),
             const Spacer(
               flex: 12,
